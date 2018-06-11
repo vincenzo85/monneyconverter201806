@@ -29,10 +29,14 @@ namespace monneyconverter
 
             string str_roman = "";
 
-            str_roman = WriteRoman(10);
+            //str_roman = ConvertToRoman(10);
+            str_roman = NumberCOnverter.ConvertToRoman(10);
+
 
             //print output
-            Console.WriteLine("Clicca un tasto per chiudere");
+            Console.WriteLine("-----------------------");
+            //Console.WriteLine("Formato Romano");
+            Console.WriteLine("Formato Romano {0}", str_roman);
 
 
             //close window
@@ -40,11 +44,17 @@ namespace monneyconverter
             Console.ReadKey();
 
         }
+
     }
 
-    public static string WriteRoman(int num)
+    public static class NumberCOnverter
     {
-        return "ret value";
-    }
 
+        public static string ConvertToRoman(int num)
+        {
+            return "MCLV";
+        }
+
+
+    }
 }
