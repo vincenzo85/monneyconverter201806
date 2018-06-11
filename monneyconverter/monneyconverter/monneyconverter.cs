@@ -8,18 +8,22 @@ namespace monneyconverter
 {
   
 
-    class WriteRoman
+    class ConvertToRoman
     {
-        public int Firstint { get; set; }
+
+        public int InputInt { get; set; }
+
+        /*public int Firstint { get; set; }
         public string Firststring { get; set; }
         public double Firstdouble { get; set; }
         public char Firstchar { get; set; }
+        */
 
-        public string Firstmethodreturn()
+        public string Run()
         {
             /*return method*/
 
-            return Firststring;
+            return "MCCLV";
 
         }
 

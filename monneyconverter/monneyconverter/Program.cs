@@ -27,15 +27,15 @@ namespace monneyconverter
             Console.WriteLine("Inserisci un numero Arabo");
             string str_input = Console.ReadLine();
 
-            
+
 
             // str_roman = WriteRoman(10);
-            WriteRoman writeRoman = new WriteRoman();
+            ConvertToRoman convertToRoman = new ConvertToRoman();
 
-            writeRoman.Firststring = str_input;
+            convertToRoman.InputInt = Convert.ToInt32(str_input) ;
 
 
-            string str_roman= writeRoman.Firstmethodreturn();
+            string str_roman = convertToRoman.Run();
 
 
             //print output
