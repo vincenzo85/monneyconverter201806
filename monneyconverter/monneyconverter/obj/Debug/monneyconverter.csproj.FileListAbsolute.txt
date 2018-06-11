@@ -1,0 +1,7 @@
+F:\aspnet\GitHub\training\SolutionNumberConversion2\monneyconverter\monneyconverter\bin\Debug\monneyconverter.exe.config
+F:\aspnet\GitHub\training\SolutionNumberConversion2\monneyconverter\monneyconverter\bin\Debug\monneyconverter.exe
+F:\aspnet\GitHub\training\SolutionNumberConversion2\monneyconverter\monneyconverter\bin\Debug\monneyconverter.pdb
+F:\aspnet\GitHub\training\SolutionNumberConversion2\monneyconverter\monneyconverter\obj\Debug\monneyconverter.csprojResolveAssemblyReference.cache
+F:\aspnet\GitHub\training\SolutionNumberConversion2\monneyconverter\monneyconverter\obj\Debug\monneyconverter.csproj.CoreCompileInputs.cache
+F:\aspnet\GitHub\training\SolutionNumberConversion2\monneyconverter\monneyconverter\obj\Debug\monneyconverter.exe
+F:\aspnet\GitHub\training\SolutionNumberConversion2\monneyconverter\monneyconverter\obj\Debug\monneyconverter.pdb
