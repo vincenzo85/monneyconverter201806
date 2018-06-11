@@ -46,7 +46,7 @@ namespace monneyconverter
                 int y;//reminder
                 //x = quoziente(InputInt, entry.Key);
                 //y = reminder(InputInt, entry.Key)
-                x = Math.DivRem(InputInt, entry.Key, y);
+                x = Math.DivRem(InputInt, entry.Key, out y);
             }
 
 
