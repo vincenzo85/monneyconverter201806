@@ -5,3 +5,10 @@ F:\aspnet\GitHub\training\SolutionNumberConversion2\monneyconverter\monneyconver
 F:\aspnet\GitHub\training\SolutionNumberConversion2\monneyconverter\monneyconverter\obj\Debug\monneyconverter.csproj.CoreCompileInputs.cache
 F:\aspnet\GitHub\training\SolutionNumberConversion2\monneyconverter\monneyconverter\obj\Debug\monneyconverter.exe
 F:\aspnet\GitHub\training\SolutionNumberConversion2\monneyconverter\monneyconverter\obj\Debug\monneyconverter.pdb
+D:\demodata\sitoweb\monneyconverter\monneyconverter201806\monneyconverter\monneyconverter\bin\Debug\monneyconverter.exe.config
+D:\demodata\sitoweb\monneyconverter\monneyconverter201806\monneyconverter\monneyconverter\bin\Debug\monneyconverter.exe
+D:\demodata\sitoweb\monneyconverter\monneyconverter201806\monneyconverter\monneyconverter\bin\Debug\monneyconverter.pdb
+D:\demodata\sitoweb\monneyconverter\monneyconverter201806\monneyconverter\monneyconverter\obj\Debug\monneyconverter.csprojResolveAssemblyReference.cache
+D:\demodata\sitoweb\monneyconverter\monneyconverter201806\monneyconverter\monneyconverter\obj\Debug\monneyconverter.csproj.CoreCompileInputs.cache
+D:\demodata\sitoweb\monneyconverter\monneyconverter201806\monneyconverter\monneyconverter\obj\Debug\monneyconverter.exe
+D:\demodata\sitoweb\monneyconverter\monneyconverter201806\monneyconverter\monneyconverter\obj\Debug\monneyconverter.pdb

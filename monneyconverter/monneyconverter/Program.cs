@@ -27,16 +27,19 @@ namespace monneyconverter
             Console.WriteLine("Inserisci un numero Arabo");
             string str_input = Console.ReadLine();
 
-            string str_roman = "";
+            
 
-            //str_roman = ConvertToRoman(10);
-            str_roman = NumberCOnverter.ConvertToRoman(10);
+            // str_roman = WriteRoman(10);
+            WriteRoman writeRoman = new WriteRoman();
+
+            writeRoman.Firststring = str_input;
+
+
+            string str_roman= writeRoman.Firstmethodreturn();
 
 
             //print output
-            Console.WriteLine("-----------------------");
-            //Console.WriteLine("Formato Romano");
-            Console.WriteLine("Formato Romano {0}", str_roman);
+            Console.WriteLine(str_roman);
 
 
             //close window
@@ -44,17 +47,8 @@ namespace monneyconverter
             Console.ReadKey();
 
         }
-
     }
 
-    public static class NumberCOnverter
-    {
+    
 
-        public static string ConvertToRoman(int num)
-        {
-            return "MCLV";
-        }
-
-
-    }
 }
