@@ -1,0 +1,119 @@
+[19:10, 11/6/2018] vincenzo difranco: // JavaScript Document
+<!--
+	function Level(i, v, x)
+		{
+		this.i = i;
+		this.v = v;
+		this.x = x;
+		}
+
+	levels = new Array();
+	levels[0] = new Level('I', 'V', 'X');
+	levels[1] = new Level('X', 'L', 'C');
+	levels[2] = new Level('C', 'D', 'M');
+
+	function calcDigit(d, l)
+		{
+		if (l > 2)
+			{
+			str = '';
+			for (var k = 1; k <= d * Math.pow(10, l - 3); k++)
+				str += 'M';
+			return str;
+			}
+		else
+			switch (d)
+				{
+				case 1:
+					return levels[l].i;
+					break;
+				case 2:
+					return levels[l].i + levels[l].i;
+					break;
+				case 3:
+					return levels[l].i + levels[l].i + levels[l].i;
+					break;
+				case 4:
+					return levels[l].i + levels[l].v;
+					break;
+				case 5:
+					return levels[l].v;
+					break;
+				case 6:
+					return levels[l].v + levels[l].i;
+					break;
+				case 7:
+					return levels[l].v + levels[l].i + levels[l].i;
+					break;
+				case 8:
+					return levels[l].v + levels[l].i + levels[l].i + levels[l].i;
+					break;
+				case 9:
+					return levels[l].i + levels[l].x;
+					break;
+				default:
+					return '';
+					break;
+				}
+		}
+
+	function toRoman(n)
+		{
+		var r = '';
+		for (var c = 0; c < n.length; c++)
+			r += calcDigit(parseInt(n.charAt(c)), n.length - c - 1);
+		return r;
+		}
+
+	val = new Array(255);
+
+	val['I'.charCodeAt(0)] = 1;
+	val['V'.charCodeAt(0)] = 5;
+	val['X'.charCodeAt(0)] = 10;
+	val['L'.charCodeAt(0)] = 50;
+	val['C'.charCodeAt(0)] = 100;
+	val['D'.charCodeAt(0)] = 500;
+	val['M'.charCodeAt(0)] = 1000;
+
+	function fromRoman(n)
+		{
+		n = n.toUpperCase();
+
+		var result = 0;
+		var lastDigit = 0;
+		for(var pos = n.length - 1; pos >= 0; pos--)
+			{
+			var curDigit = val[n.charCodeAt(pos)];
+
+			if (curDigit == NaN)
+				return 'Invalid roman number!';
+
+			if (curDigit >= lastDigit)
+				result += curDigit;
+			else
+				result -= curDigit;
+
+			lastDigit = curDigit;			
+			}
+
+		return result;
+		}
+
+	function isNumeric(s)
+		{
+		for (var pos = 0; pos < s.length; pos++)
+			if (s.charAt(pos) < '0' || s.charAt(pos) > '9')
+				return false;
+		return true;
+		}
+
+	function get(f)
+		{
+		if (isNumeric(f.inp.value))
+			f.out.value = toRoman(f.inp.value);
+		else
+			f.out.value = fromRoman(f.inp.value);
+		}
+
+// -->
+[19:11, 11/6/2018] vincenzo difranco: https://social.msdn.microsoft.com/Forums/vstudio/en-US/70eaf2c8-52d2-426f-91cb-22325509a4f7/how-to-convert-a-number-into-roman-numeral-in-visual-c?forum=csharpgeneral
