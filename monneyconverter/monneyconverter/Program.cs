@@ -11,7 +11,8 @@ namespace monneyconverter
         static void Main(string[] args)
         {
 
-            /////////biagio2218mychange
+
+//modifica2321
 
             Console.Clear();
 
@@ -26,8 +27,6 @@ namespace monneyconverter
             //input
             Console.WriteLine("Inserisci un numero Arabo");
             string str_input = Console.ReadLine();
-
-
 
             // str_roman = WriteRoman(10);
             ConvertToRoman convertToRoman = new ConvertToRoman();
