@@ -39,36 +39,33 @@ namespace monneyconverter
             roman[4] = "IV";
             roman[1] = "I";
 
-
-
             //https://stackoverflow.com/questions/141088/what-is-the-best-way-to-iterate-over-a-dictionary
-            /*foreach (IDictionary<int, string> entry in roman)
-            {
-                // do something with entry.Value or entry.Key
-            }*/
-
             foreach (KeyValuePair<int, string> entry in roman)
             {
-
+                int x;//quoziente
+                int y;//reminder
+                //x = quoziente(InputInt, entry.Key);
+                //y = reminder(InputInt, entry.Key)
+                x = Math.DivRem(InputInt, entry.Key, y);
             }
-            
 
-                /*
-                 * 
-                          def roman_num(num):
-                                for r in roman.keys():
-                                    x, y = divmod(num, r)
-                                    yield roman[r] * x
-                                    num -= (r* x)
-                                    if num > 0:
-                                        roman_num(num)
-                                    else:
-                                        break
 
-                            return "".join([a for a in roman_num(num)])
-                */
+            /*
+             * 
+                      def roman_num(num):
+                            for r in roman.keys():
+                                x, y = divmod(num, r)
+                                yield roman[r] * x
+                                num -= (r* x)
+                                if num > 0:
+                                    roman_num(num)
+                                else:
+                                    break
 
-                return "MCCLV";
+                        return "".join([a for a in roman_num(num)])
+            */
+
+            return "MCCLV";
 
         }
 
