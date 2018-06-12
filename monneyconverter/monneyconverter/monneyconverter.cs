@@ -11,61 +11,49 @@ namespace monneyconverter
     class ConvertToRoman
     {
 
-        public int InputInt { get; set; }
-
-        /*public int Firstint { get; set; }
-        public string Firststring { get; set; }
-        public double Firstdouble { get; set; }
-        public char Firstchar { get; set; }
-        */
-
-        public string Run()
+        public string Run(int InputNum)
         {
-            /*return method*/
+            string ret = "";
 
-            IDictionary<int, string> roman = new Dictionary<int, string>();
+            //portare fuori come rpoprietà/costante di calsse
+            IDictionary<int, string> romans = new Dictionary<int, string>();
 
-            roman[1000] = "M";
-            roman[900] = "CM";
-            roman[500] = "D";
-            roman[400] = "CD";
-            roman[100] = "C";
-            roman[90] = "XC";
-            roman[50] = "L";
-            roman[40] = "XL";
-            roman[10] = "X";
-            roman[9] = "IX";
-            roman[5] = "V";
-            roman[4] = "IV";
-            roman[1] = "I";
+            romans[1000] = "M";
+            romans[900] = "CM";
+            romans[500] = "D";
+            romans[400] = "CD";
+            romans[100] = "C";
+            romans[90] = "XC";
+            romans[50] = "L";
+            romans[40] = "XL";
+            romans[10] = "X";
+            romans[9] = "IX";
+            romans[5] = "V";
+            romans[4] = "IV";
+            romans[1] = "I";
 
             //https://stackoverflow.com/questions/141088/what-is-the-best-way-to-iterate-over-a-dictionary
-            foreach (KeyValuePair<int, string> entry in roman)
+            foreach (KeyValuePair<int, string> roman in romans)
             {
-                int x;//quoziente
-                int y;//reminder
-                //x = quoziente(InputInt, entry.Key);
-                //y = reminder(InputInt, entry.Key)
-                x = Math.DivRem(InputInt, entry.Key, out y);
+                if (InputNum >= roman.Key)
+                {
+                    int x;//quoziente
+                    int y;//reminder
+                    x = Math.DivRem(InputNum, roman.Key, out y);
+
+                    ret += string.Concat(Enumerable.Repeat(roman.Value, x));
+
+                    if (y > 0)
+                    {
+                        ret += Run(y);
+                    }
+
+                    break;
+                }
             }
-
-
-            /*
-             * 
-                      def roman_num(num):
-                            for r in roman.keys():
-                                x, y = divmod(num, r)
-                                yield roman[r] * x
-                                num -= (r* x)
-                                if num > 0:
-                                    roman_num(num)
-                                else:
-                                    break
-
-                        return "".join([a for a in roman_num(num)])
-            */
-
-            return "MCCLV";
+            //return "MCCLV";
+            return ret;
+            
 
         }
 
