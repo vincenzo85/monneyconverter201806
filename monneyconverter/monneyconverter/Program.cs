@@ -10,34 +10,43 @@ namespace monneyconverter
     {
         static void Main(string[] args)
         {
+            bool whilebool = true;
+            do
+            {
+                Console.Clear();
 
-            Console.Clear();
-
-            //presentazione
-            Console.WriteLine("Benvenuto in Number Conversion");
-            Console.WriteLine("-----------------------");
+                //presentazione
+                Console.WriteLine("Benvenuto in Number Conversion");
+                Console.WriteLine("-----------------------");
 
 
-            Console.WriteLine("Converti un numero da arabo a romano");
-            Console.WriteLine("-----------------------");
+                Console.WriteLine("Converti un numero da arabo a romano");
+                Console.WriteLine("-----------------------");
 
-            //input
-            Console.WriteLine("Inserisci un numero Arabo");
-            string str_input = Console.ReadLine();
+                //input
+                Console.WriteLine("Inserisci un numero Arabo");
+                string str_input = Console.ReadLine();
 
-            ConvertToRoman convertToRoman = new ConvertToRoman();
+                ConvertToRoman convertToRoman = new ConvertToRoman();
 
-            int InputNum = Convert.ToInt32(str_input);
+              
+                int InputNum = Convert.ToInt32(str_input);
 
-            string str_roman = convertToRoman.Run(InputNum);
+                string str_roman = convertToRoman.Run(InputNum);
 
-            //print output
-            Console.WriteLine(str_roman);
+                //print output
+                Console.WriteLine(str_roman);
 
-            //close window
-            Console.WriteLine("Clicca un tasto per chiudere");
-            Console.ReadKey();
+                //close window
+                Console.WriteLine("scrivi x per chiudere qualsiasi altro carattere per continuare");
+                str_input = Console.ReadLine();
+               
 
+                if (str_input == "x")
+                {
+                    whilebool = false;
+                }
+            } while (whilebool);
         }
     }
 
